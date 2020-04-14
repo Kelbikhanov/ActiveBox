@@ -4,6 +4,8 @@ $(function() {
     let intro = $("#intro");
     let introH;
     let scrollPos = $(window).scrollTop();
+    let nav = $("#nav");
+    let navToggle = $("#navToggle");
 
     $(window).on("scroll load resize", function() {
         introH = intro.innerHeight();
@@ -15,4 +17,43 @@ $(function() {
             header.removeClass("fixed");
         }
     });
+
+
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+
+        let elementId = $(this).data('scroll');
+        let elementOffset = $(elementId).offset().top;
+
+        nav.removeClass("show");
+
+        $("html, body").animate({
+            scrollTop: elementOffset - 80
+        }, 700);
+    });
+
+    navToggle.on('click', function(event) {
+        event.preventDefault();
+
+        nav.toggleClass("show");
+    });
+
+    /*Reviews Slider*/
+
+    let slider = $("#reviewsSlider");
+
+    slider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+
 });
+
+
+
+
+

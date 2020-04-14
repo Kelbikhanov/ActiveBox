@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans|Raleway:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>ActiveBox</title>
@@ -15,17 +16,17 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <div class="header__logo">
-                    <img src="./img/Logo.png" alt="">
+                <div class="header__logo" data-scroll="#intro">
+                    <a href=""><img src="./img/Logo.png" alt=""></a>
                 </div>
-                <nav class="nav">
-                    <a href="" class="nav__link">Features</a>
-                    <a href="" class="nav__link">Works</a>
-                    <a href="" class="nav__link">Our Team</a>
-                    <a href="" class="nav__link">Testimonials</a>
-                    <a href="" class="nav__link">Features</a>
+                <nav class="nav" id="nav">
+                    <a href="" class="nav__link" data-scroll="#features">Features</a>
+                    <a href="" class="nav__link" data-scroll="#works">Works</a>
+                    <a href="" class="nav__link" data-scroll="#team">Our Team</a>
+                    <a href="" class="nav__link" data-scroll="#reviews">Testimonials</a>
+                    <a href="" class="nav__link" data-scroll="#download">Download</a>
                 </nav>
-                <button class="burger">
+                <button class="burger" id="navToggle">
                     <span class="burger__item"></span>
                 </button>
             </div>
@@ -43,7 +44,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="features">
         <div class="features">
             <div class="features__item">
                 <img class="features__icon" src="./img/icons/icon1.png" alt="">
@@ -95,7 +96,7 @@
         </div> 
     </div>
 
-    <div class="works">
+    <div class="works" id="works">
         <div class="works__item">
             <img class="works__photo" src="./img/portfolio/portfolio1.jpg" alt="">
             <div class="works__content">
@@ -162,7 +163,7 @@
     </div>
 
 
-    <div class="team">
+    <div class="team" id="team">
         <div class="container">
             <div class="team__inner">
                 <div class="team__item">
@@ -248,23 +249,44 @@
         </div>
     </div>
 
-    <div class="reviews">
-        <div class="container">
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img class="reviews__img" src="./img/reviews.jpg" alt="">
-                </div>
-                <div class="reviews__content">
-                    <div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-                         Donec sed odio dui. Aenean eu leo quam...”</div>
-                    <div class="reviews__name">Susan Sims, Interaction Designer at XYZ</div>
+
+        
+            <div class="reviews" id="reviews">
+                <div class="container">
+                    <div class="reviews__slider" id="reviewsSlider">
+                        <div class="slick-item">
+                            <div class="reviews__item">
+                                <div class="reviews__photo">
+                                    <img class="reviews__img" src="./img/reviews.jpg" alt="">
+                                </div>
+                                <div class="reviews__content">
+                                    <div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                                         Donec sed odio dui. Aenean eu leo quam...”</div>
+                                    <div class="reviews__name">Susan Sims, Interaction Designer at XYZ</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slick-item">
+                            <div class="reviews__item">
+                                <div class="reviews__photo">
+                                    <img class="reviews__img" src="./img/reviews.jpg" alt="">
+                                </div>
+                                <div class="reviews__content">
+                                    <div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                                         Donec sed odio dui. Aenean eu leo quam...”</div>
+                                    <div class="reviews__name">Susan Sims, Interaction Designer at XYZ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        
 
 
-    <div class="download">
+    <div class="download" id="download">
         <div class="container">
             <h3 class="download__title">Are You Ready to Start? Download Now For Free!</h3>
             <div class="download__text">Fusce dapibus, tellus ac cursus commodo</div>
@@ -323,6 +345,7 @@
     </footer>
 
     <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 </html>
